@@ -1,0 +1,38 @@
+$green: #00b684;
+$yellow:#ffeaa7;
+$red:#e17055;
+$purple: #a29bfe;
+
+body {
+   background: rgb(154, 50, 50);
+   &:after {
+      content: "default";
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      font-size: 20px;
+      background: rgb(#fff,  .5);
+   }
+}
+
+
+@media screen and (max-width:1200px)  {
+   body {background:$green;}
+   body::after{content:"destop"}
+}
+ 
+@media (max-width: 992px) {
+   body {background: $yellow;}
+   body:after {content: "laptop";}
+}
+ 
+@media (max-width: 768px) {
+   body {background: $red;}
+   body:after {content: "tablets";}
+}
+ 
+@media (max-width: 480px) {
+   body {background: $purple;}
+   body:after {content: "phones";}
+}
